@@ -1,0 +1,13 @@
+<!-- docs/_sidebar.md -->
+- [Home](/)
+- [Angular](Angular\00_TipsNTricks.md)
+	- [Tips & Tricks](Angular\00_TipsNTricks.md)
+	- [QuickStart](Angular\01_QuickStart)
+	- [Components](Angular\02_Components.md)
+	- [DataBindings](Angular\03_DataBindings.md)
+	- [StructuralDirectives](Angular\04_StructuralDirectives.md)
+	- [ImportantLinks](Angular\097_ImportantLinks.md)
+	- [Dos Commands](Angular\098_Dos Commands.md)
+	- [Angular-cli](Angular\099_Angular-cli.md)
+- [DotNet Core](DotNetCore\00_Tips&Tricks.md)
+- [Python](Python\Django.md)
