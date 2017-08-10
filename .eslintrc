@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "vue"
+  ],
+  "parserOptions": {
+      "ecmaVersion": 8
+    },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "Docsify": true,
+    "$docsify": true
+  }
+}
