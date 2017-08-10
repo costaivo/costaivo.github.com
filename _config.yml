@@ -1,8 +1,1 @@
-title: Costa Ivo
-description: Coding Trails
-google_analytics: 
-show_downloads: true
-theme: jekyll-theme-minimal
-
-gems:
-  - jekyll-mentions
+theme: jekyll-theme-cayman
