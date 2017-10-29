@@ -2,6 +2,8 @@
 
 ## NodeJs
 
+## NPM Tips
+
 ### How to easily update references to the packages in package.json file
 
 - Install the `npm-check-updates` package to update your node packages easily.
