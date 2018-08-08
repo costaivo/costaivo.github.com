@@ -18,3 +18,10 @@
     cd angular2_hello_world
 ```
 
+* Updating to latest version of Angular-cli
+  
+``` batch 
+    npm uninstall -g angular-cli
+    npm cache clean
+    npm install -g @angular/cli@latest
+```
