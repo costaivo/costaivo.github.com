@@ -2,7 +2,7 @@
 - [Home](/)
 - [Angular](Angular\00_TipsNTricks.md)
 	- [Tips & Tricks](Angular\00_TipsNTricks.md)
-	- [QuickStart](Angular\01_QuickStart)
+	- [QuickStart](Angular\01_QuickStart.md)
 	- [Components](Angular\02_Components.md)
 	- [DataBindings](Angular\03_DataBindings.md)
 	- [StructuralDirectives](Angular\04_StructuralDirectives.md)

@@ -1,4 +1,4 @@
-# Learning AngularJs 2 - QuickStart
+# Learning Angular - QuickStart
 
 ## Lesson Contents
 
