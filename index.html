@@ -27,7 +27,7 @@
     <p class="sc-embed" data-width="300px" data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22NIFTYBEES%22%7D%5D" data-cardsize="small" data-withtt="false" data-withsearch="false" style="width:300px;min-height:400px;display:flex;align-items:center;justify-content:center;margin:5px"> <strong>loading widget to trade NIFTYBEES</strong> </p> <script async src="https://www.gateway-tt.in/assets/embed.js"></script> 
     </div>
 
-    const playlistId = '1JNi9ycf5d0OwBmsNsjs6f';
+  
 
 <iframe
   title="Spotify Embed: Recommendation Playlist "
@@ -39,5 +39,19 @@
   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
   loading="lazy"
 />
+
+  <div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+  <script>
+      const playlistId = '1JNi9ycf5d0OwBmsNsjs6f';
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+const element = document.getElementById("div1");
+element.appendChild(para);
+</script>
       </body>
   </html>
