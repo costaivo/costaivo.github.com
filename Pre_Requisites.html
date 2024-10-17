@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>RPA Session Resources</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom styles -->
+    <style>
+        body {
+            font-family: 'Consolas', monospace;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Add pointer cursor to banner */
+        .banner-container img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Section -->
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+                <!-- Left-aligned, bold, and font set globally to Consolas -->
+                <a class="navbar-brand text-white fw-bold text-start"
+                   href="/"
+                   data-bs-toggle="tooltip"
+                   data-bs-placement="bottom"
+                   title="Explore the resources to get started!">
+                    Robotic Process Automation (RPA) Session
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 id="prerequisites">Prerequisites</h2>
+        <ol>
+            <li>One of the supported operating systems (MacOS, Windows 11, Linux)</li>
+            <li>Java (JDK & JVM) or can even use any of the open source JDK
+                (<a href="https://corretto.aws/downloads/latest/amazon-corretto-8-x64-windows-jdk.msi">https://corretto.aws/downloads/latest/amazon-corretto-8-x64-windows-jdk.msi</a>)
+            </li>
+            <li>Chrome browser for browser based automation</li>
+            <li>Any text editor of your choice for creation of workflows (Ideally <strong>VSCode</strong>)</li>
+        </ol>
+
+        <h2 id="installation">Installation</h2>
+        <p>Visit Tagui installation page for guided installation. <br>
+            <a href="https://tagui.readthedocs.io/en/latest/setup.html">https://tagui.readthedocs.io/en/latest/setup.html</a>
+        </p>
+        <ol>
+            <li>Download <a href="https://github.com/kelaberetiv/TagUI/releases/download/v6.110.0/TagUI_Windows.zip">https://github.com/kelaberetiv/TagUI/releases/download/v6.110.0/TagUI_Windows.zip</a></li>
+            <li>Visit the location of the downloaded file and extract the zip to the desired location. <br>
+                Ex. D:/Projects/Tagui</li>
+            <li>Install OpenJDK or JDK 17.
+                (<a href="https://corretto.aws/downloads/latest/amazon-corretto-8-x64-windows-jdk.msi">https://corretto.aws/downloads/latest/amazon-corretto-8-x64-windows-jdk.msi</a>)</li>
+            <li>Install latest version of chrome browser if not already installed on your system. <br>
+                (<a href="https://www.google.com/chrome/what-you-make-of-it/">https://www.google.com/chrome/what-you-make-of-it/</a>)</li>
+            <li>Click on the start menu, search for <strong>Settings &gt; System &gt; About &gt; Advanced System Settings &gt; Environment Variables</strong></li>
+            <li>Add path <strong>D:/Projects/Tagui/**</strong> to the <strong>System Environment Variables</strong></li>
+            <li>Once complete, open command prompt and type the following command: <br>
+                <code>tagui</code>
+            </li>
+            <li>If you get "<strong>php.exe - System Error</strong>" then visit the trouble shooting page and install <strong>Visual C++ Redistributable</strong>. <br>
+                (<a href="https://tagui.readthedocs.io/en/latest/setup_troubleshooting.html#troubleshooting-windows">https://tagui.readthedocs.io/en/latest/setup_troubleshooting.html#troubleshooting-windows</a>)</li>
+            <li>Now run the command from <strong>Step 7</strong> again and if there were no errors then you've successfully installed tagui</li>
+            <li>Verify the installation by simply running one of the sample workflows by firing the following command: <br>
+                <code>tagui D:/Projects/Tagui/flows/sample/1_google.tag</code>
+            </li>
+            <li>If the automation is able to complete by opening up a chrome instance, then you've completed the installation process successfully.</li>
+        </ol>
+    </div>
+
+    <!-- Bootstrap 5 JS (for tooltips) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
