@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>RPA Presentation Slides</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+            /* Prevents scrollbars */
+        }
+
+        /* Slideshow Container Styling */
+        .slideshow-container {
+            position: relative;
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            margin: 10;
+            padding: 10;
+        }
+
+        /* Styling for Slides (Images) */
+        .slides {
+            display: none;
+            width: 100vw;
+            /* Full viewport width */
+            height: 100vh;
+            /* Full viewport height */
+            object-fit: contain;
+            /* Image covers the entire screen while maintaining aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Navigation Button Styling */
+        .prev {
+            cursor: pointer;
+            position: absolute;
+            left: 0%;
+            bottom: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            background-color: rgba(71, 30, 30, 0.5);
+            transform: translateY(-50%);
+        }
+
+        .next {
+            cursor: pointer;
+            position: absolute;
+            right: 0%;
+            bottom: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Dots/Indicators Styling */
+        .dot-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active-dot {
+            background-color: #717171;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slideshow-container">
+        <!-- Slide Images -->
+        <img src="RPA_images/Slide1.jpg"
+             class="slides active"
+             alt="Slide 1">
+        <img src="RPA_images/Slide2.jpg"
+             class="slides"
+             alt="Slide 2">
+        <img src="RPA_images/Slide3.jpg"
+             class="slides"
+             alt="Slide 3">
+        <img src="RPA_images/Slide4.jpg"
+             class="slides"
+             alt="Slide 4">
+        <img src="RPA_images/Slide5.jpg"
+             class="slides"
+             alt="Slide 5">
+        <img src="RPA_images/Slide6.jpg"
+             class="slides"
+             alt="Slide 6">
+        <img src="RPA_images/Slide7.jpg"
+             class="slides"
+             alt="Slide 7">
+        <img src="RPA_images/Slide8.jpg"
+             class="slides"
+             alt="Slide 8">
+        <img src="RPA_images/Slide9.jpg"
+             class="slides"
+             alt="Slide 9">
+        <img src="RPA_images/Slide10.jpg"
+             class="slides"
+             alt="Slide 10">
+        <img src="RPA_images/Slide11.jpg"
+             class="slides"
+             alt="Slide 11">
+        <img src="RPA_images/Slide12.jpg"
+             class="slides"
+             alt="Slide 12">
+        <img src="RPA_images/Slide13.jpg"
+             class="slides"
+             alt="Slide 13">
+        <img src="RPA_images/Slide14.jpg"
+             class="slides"
+             alt="Slide 14">
+        <img src="RPA_images/Slide15.jpg"
+             class="slides"
+             alt="Slide 15">
+        <img src="RPA_images/Slide16.jpg"
+             class="slides"
+             alt="Slide 16">
+        <img src="RPA_images/Slide17.jpg"
+             class="slides"
+             alt="Slide 17">
+        
+        <img src="RPA_images/Slide18.jpg"
+             class="slides"
+             alt="Slide 18">
+
+        <!-- Navigation Buttons -->
+        <a class="prev"
+           onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next"
+           onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots/Indicators -->
+    <div class="dot-container">
+        <!-- Create dots for each slide -->
+        <span class="dot"onclick="setSlide(1)"></span>
+        <span class="dot"onclick="setSlide(2)"></span>
+        <span class="dot"onclick="setSlide(3)"></span>
+        <span class="dot" onclick="setSlide(4)"></span>
+        <span class="dot" onclick="setSlide(5)"></span>
+        <span class="dot" onclick="setSlide(6)"></span>
+        <span class="dot" onclick="setSlide(7)"></span>
+        <span class="dot" onclick="setSlide(8)"></span>
+        <span class="dot" onclick="setSlide(9)"></span>
+        <span class="dot" onclick="setSlide(10)"></span>
+        <span class="dot" onclick="setSlide(11)"></span>
+        <span class="dot" onclick="setSlide(12)"></span>
+        <span class="dot" onclick="setSlide(13)"></span>
+        <span class="dot" onclick="setSlide(14)"></span>
+        <span class="dot" onclick="setSlide(15)"></span>
+        <span class="dot" onclick="setSlide(16)"></span>
+        <span class="dot" onclick="setSlide(17)"></span>
+        <span class="dot"
+              onclick="setSlide(18)"></span>
+    </div>
+
+    <script>
+        let slideIndex=1;
+
+        function changeSlide(n) {
+            showSlides(slideIndex+=n);
+        }
+
+        function setSlide(n) {
+            showSlides(slideIndex=n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides=document.getElementsByClassName("slides");
+            let dots=document.getElementsByClassName("dot");
+
+            if(n>slides.length) {slideIndex=1;}
+            if(n<1) {slideIndex=slides.length;}
+
+            for(i=0;i<slides.length;i++) {
+                slides[i].style.display="none";
+            }
+
+            for(i=0;i<dots.length;i++) {
+                dots[i].className=dots[i].className.replace(" active-dot", "");
+            }
+
+            slides[slideIndex-1].style.display="block";
+            dots[slideIndex-1].className+=" active-dot";
+        }
+
+        // Initialize the slideshow
+        showSlides(slideIndex);
+    </script>
+
+</body>
+
+</html>
