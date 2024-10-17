@@ -1,0 +1,18 @@
+// print a starter message
+echo We're starting with the workflow
+
+// visit google.com
+https://www.google.com
+
+// enter query top 10 artists in the world
+type input as Top 10 Artists in the world[enter]
+
+// ask for users consent
+ask Should I take a snapshot of this?
+
+// if the users grants consent take a snapshot
+if ask_result equal to "yes"
+    snap M8OgIe to top_10_artists.png
+    echo We've taken the snapshot for you
+else 
+    echo We've not taken the snapshot, since you were rude with the permissions.
