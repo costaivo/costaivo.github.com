@@ -1,43 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>RPA Session Resources</title>
 
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
-
- <!-- Bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet">
     
-    <!-- Custome Project Styles-->
-  <link rel="stylesheet" href="css/style.css">
-  <title>Costa Ivo</title>
-  </head>
-  <body>
-  <h1 class="display-1"> Costa Ivo</h1>
-    <div class="flex-container">
-   <div class="sc-embed" data-width="300px" data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22ITC%22%7D%5D" data-cardsize="small" data-withtt="false" data-withsearch="false" style="width:300px;min-height:400px;display:flex;align-items:center;justify-content:center;margin:5px"> <strong>loading widget to trade ITC</strong> </div> <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
-   <div class="sc-embed" data-width="300px" data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22HDFCBANK%22%7D%5D" data-cardsize="small" data-withtt="true" data-withsearch="false" style="width:300px;min-height:400px;display:flex;align-items:center;justify-content:center;margin:5px"> <strong>loading widget to trade HDFCBANK</strong> </div> <script async src="https://www.gateway-tt.in/assets/embed.js"></script> 
-   <div class="sc-embed" data-width="300px" data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22KOTAKBANK%22%7D%5D" data-cardsize="small" data-withtt="true" data-withsearch="false" style="width:300px;min-height:400px;display:flex;align-items:center;justify-content:center;margin:5px"> <strong>loading widget to trade KOTAKBANK</strong> </div> <script async src="https://www.gateway-tt.in/assets/embed.js"></script>
-    <p class="sc-embed" data-width="300px" data-orders="%5B%7B%22quantity%22%3A10%2C%22ticker%22%3A%22NIFTYBEES%22%7D%5D" data-cardsize="small" data-withtt="false" data-withsearch="false" style="width:300px;min-height:400px;display:flex;align-items:center;justify-content:center;margin:5px"> <strong>loading widget to trade NIFTYBEES</strong> </p> <script async src="https://www.gateway-tt.in/assets/embed.js"></script> 
-    </div>
+    <!-- Custom styles -->
+    <style>
+      body {
+        font-family: 'Consolas', monospace;
+      }
+    
+      .hidden {
+        display: none;
+      }
+    
+      /* Add pointer cursor to banner */
+      .banner-container img {
+        cursor: pointer;
+      }
+    </style>
+    </head>
+    
+    <body class="bg-light">
+    
+      <!-- Navbar Section -->
+      <header class="mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+          <div class="container">
+            <!-- Left-aligned, bold, and font set globally to Consolas -->
+            <a class="navbar-brand text-white fw-bold text-start"
+               href="#"
+               data-bs-toggle="tooltip"
+               data-bs-placement="bottom"
+               title="Explore the resources to get started!">
+              Robotic Process Automation (RPA) Session
+            </a>
+          </div>
+        </nav>
+      </header>
+    
+      <!-- Banner Section -->
+      <div class="container mb-4">
+        <div class="banner-container">
+          <img src="banner.jfif"
+               alt="RPA Session Banner"
+               class="img-fluid">
+        </div>
+      </div>
+    
+      <!-- Resources Section -->
+      <section class="container hidden resources-section">
+        <h2 class="text-center mb-4">Session Resources</h2>
+    
+        <div class="row g-4">
+          <!-- Card for Presentation -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="Presentation.html"
+                     class="text-primary">Presentation</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card for Pre Requisites -->
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="Pre_Requisites.html"
+                     class="text-primary">Pre Requisites</a>
+                </h5>
+              </div>
+            </div>
+          </div>
 
+      <!-- Card for Code Snippets -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="Code_Snippets.html"
+                 class="text-primary">Code Snippets</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card for Completed Solutions -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="Completed_Solutions.html"
+                 class="text-primary">Completed Solutions</a>
+            </h5>
+          </div>
+        </div>
+        </div>
+        </div>
+        </section>
+        
+        <!-- Bootstrap 5 JS (for tooltips) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   
+  <!-- Initialize tooltips -->
+  <script>
+    const tooltipTriggerList=document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList=[...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
-<iframe
-  title="Spotify Embed: Recommendation Playlist"
-  src="https://open.spotify.com/embed/playlist/1JNi9ycf5d0OwBmsNsjs6f?utm_source=generator&theme=0"
-  width="100%"
-  height="400"
-  frameBorder="0"
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-  loading="lazy"
-/>
+      document.addEventListener('DOMContentLoaded', function() {
+        const banner=document.querySelector('.banner-container');
+        const resourcesSection=document.querySelector('.resources-section');
 
-      </body>
-  </html>
+      banner.addEventListener('click', function() {
+        banner.classList.add('hidden');
+        resourcesSection.classList.remove('hidden');
+      });
+    });
+      </script>
+
+</body>
+
+</html>
