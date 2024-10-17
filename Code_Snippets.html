@@ -1,133 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <title>RPA Session Resources</title>
+    <title>RPA: Code Snippets</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
           rel="stylesheet">
-
     <!-- Custom styles -->
     <style>
-        body {
-            font-family: 'Consolas', monospace;
-        }
+      body {
+        font-family: 'Consolas', monospace;
+      }
+    
+      .hidden {
+        display: none;
+      }
+      /* Add pointer cursor to banner */
+      .banner-container img {
+        cursor: pointer;
+      }
 
-        .hidden {
-            display: none;
-        }
+      /* Style for code blocks */
+      pre {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto; /* Add horizontal scroll for long code lines */
+      }
 
-        /* Add pointer cursor to banner */
-        .banner-container img {
-            cursor: pointer;
-        }
+      /* Alternate accordion background colors */
+      .accordion-item:nth-child(even) .accordion-button {
+        background-color: #e9ecef; /* Light gray */
+      }
 
-        /* Style for code blocks */
-        pre {
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-            /* Add horizontal scroll for long code lines */
-        }
+      .accordion-item:nth-child(odd) .accordion-button {
+        background-color: #f8f9fa; /* White */
+      }
     </style>
 </head>
 
 <body class="bg-light">
-
     <!-- Navbar Section -->
     <header class="mb-4">
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <div class="container">
-                <!-- Left-aligned, bold, and font set globally to Consolas -->
-                <a class="navbar-brand text-white fw-bold text-start"
-                   href="/"
-                   data-bs-toggle="tooltip"
-                   data-bs-placement="bottom"
-                   title="Explore the resources to get started!">
-                    Robotic Process Automation (RPA) Session
-                </a>
-            </div>
+        <div class="container">
+            <!-- Left-aligned, bold, and font set globally to Consolas -->
+            <a class="navbar-brand text-white fw-bold text-start"
+               href="/"
+               data-bs-toggle="tooltip"
+               data-bs-placement="bottom"
+               title="Explore the resources to get started!">
+                Robotic Process Automation (RPA) Session
+            </a>
+        </div>
         </nav>
     </header>
 
     <div class="container">
-        <!-- Breadcrumb Section -->
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active"
-                    aria-current="page">RPA Session Resources</li>
-            </ol>
-        </nav>
+            <!-- Breadcrumb Section -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active"
+              aria-current="page">Code Snippets</li>
+        </ol>
+      </nav>
         <h1 id="session-automation">Session: Automation</h1>
         <p>Have you ever wondered what it be like to clone yourself. That is someone sitting at your desk in your place, doing your job for you while you sip on a cup of coffee? It would be something else right? Well, this is exactly what is called as having a "<strong>bot</strong>". Bot is a program which is a collection of tasks, rules, keyboard and mouse interactions. It typically imitates human interactions with different applications.</p>
 
-        <h2 id="bot-types">Bot types</h2>
-        <ol>
-            <li><strong>Attended:</strong> Programmed to work along with human intervention</li>
-            <li><strong>Unattended:</strong> Fully automated by teaching robot how to perform tasks</li>
-        </ol>
+        <div class="accordion"
+             id="rpaAccordion">
+        
+            <!-- Bot Types -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingOne">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="false"
+                            aria-controls="collapseOne">
+                        Bot types
+                    </button>
+                </h2>
+                <div id="collapseOne"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingOne"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <ol>
+                            <li><strong>Attended:</strong> Programmed to work along with human intervention</li>
+                            <li><strong>Unattended:</strong> Fully automated by teaching robot how to perform tasks</li>
+                        </ol>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="rpa-robotic-process-automation-1">RPA (Robotic Process Automation)</h2>
-        <p>RPA is a software program that imitates human actions while interacting with a computer application and accomplishing automation of repetitive rule based tasks. It makes of bots to perform the actions.</p>
+            <!-- RPA Definition -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTwo">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo">
+                        RPA (Robotic Process Automation)
+                    </button>
+                </h2>
+                <div id="collapseTwo"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwo"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>RPA is a software program that imitates human actions while interacting with a computer application and accomplishing automation of repetitive rule-based tasks. It makes use of bots to perform the actions.</p>
+                    </div>
+                </div>
+            </div>
 
-        <h2 id="what-can-rpa-do">What can RPA do?</h2>
-        <ul>
-            <li>Data entry</li>
-            <li>Copy/paste</li>
-            <li>Multiple app interactions</li>
-            <li>Authentication</li>
-            <li>Verification Rule/Check</li>
-            <li>Navigation</li>
-        </ul>
+            <!-- What can RPA do? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingThree">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree">
+                        What can RPA do?
+                    </button>
+                </h2>
+                <div id="collapseThree"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingThree"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Data entry</li>
+                            <li>Copy/paste</li>
+                            <li>Multiple app interactions</li>
+                            <li>Authentication</li>
+                            <li>Verification Rule/Check</li>
+                            <li>Navigation</li>
+                        </ul>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="rpa-tools">RPA tools</h2>
-        <ul>
-            <li>Automation Anywhere</li>
-            <li>UiPath</li>
-            <li>TagUI</li>
-        </ul>
+            <!-- RPA Tools -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingFour">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour">
+                        RPA tools
+                    </button>
+                </h2>
+                <div id="collapseFour"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingFour"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Automation Anywhere</li>
+                            <li>UiPath</li>
+                            <li>TagUI</li>
+                        </ul>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="tagui">TAGUi</h2>
-        <ol>
-            <li>TagUi is open source</li>
-            <li>It is cross platform i.e it supports Windows, MacOS and Linux.</li>
-            <li>Supports visual automation of web and desktop application using <strong>SikuliX</strong>. <strong>SikuliX</strong> is a computer vision library that allows image based identification of objects on the screen.</li>
-            <li>Supports writing code in 20+ human spoken languages. Additionally, supports Python and Javascript.</li>
-            <li>Smaller learning curve as compared to other software tools</li>
-        </ol>
+            <!-- TAGUi -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingFive">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive"
+                            aria-expanded="false"
+                            aria-controls="collapseFive">
+                        TAGUi
+                    </button>
+                </h2>
+                <div id="collapseFive"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingFive"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>TagUi is open source</li>
+                            <li>It is cross-platform, i.e., it supports Windows, macOS, and Linux.</li>
+                            <li>Supports visual automation of web and desktop applications using <strong>SikuliX</strong>. <strong>SikuliX</strong> is a computer vision library that allows image-based identification of objects on the screen.</li>
+                            <li>Supports writing code in 20+ human-spoken languages. Additionally, it supports Python and JavaScript.</li>
+                            <li>Smaller learning curve compared to other software tools</li>
+                            </ol>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="prerequisites-1">Prerequisites</h2>
-        <ul>
-            <li><a href="/Pre_requisites.html">Installation guide</a></li>
-        </ul>
+            <!-- Prerequisites -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingSix">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix"
+                            aria-expanded="false"
+                            aria-controls="collapseSix">
+                        Prerequisites
+                    </button>
+                </h2>
+                <div id="collapseSix"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingSix"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="/Prerequisites.html">Installation guide</a></li>
+                            </ul>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="tagui-program-structure">TagUI Program Structure</h2>
-        <p>It comprises of 4 key components:</p>
-        <ol>
-            <li><strong>Flow file:</strong> <strong>.tag</strong> extension file which contains all your code</li>
-            <li><strong>Flow:</strong> is a collection/series of steps</li>
-            <li><strong>Step:</strong> is basically a rule or an action that needs to be performed</li>
-            <li><strong>Identifier:</strong> It is used to locate different parts of the screen</li>
-        </ol>
+            <!-- TagUI Program Structure -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingSeven">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven"
+                            aria-expanded="false"
+                            aria-controls="collapseSeven">
+                        TagUI Program Structure
+                    </button>
+                </h2>
+                <div id="collapseSeven"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingSeven"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>It comprises of 4 key components:</p>
+                        <ol>
+                            <li><strong>Flow file:</strong> <strong>.tag</strong> extension file which contains all your code</li>
+                            <li><strong>Flow:</strong> is a collection/series of steps</li>
+                            <li><strong>Step:</strong> is basically a rule or an action that needs to be performed</li>
+                            <li><strong>Identifier:</strong> It is used to locate different parts of the screen</li>
+                        </ol>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="simple-hello-world-workflow">Simple Hello World Workflow</h2>
-        <p>Create a simple <code>hello_world.tag</code> file</p>
-        <pre><code>echo "Hello World!"
+            <!-- Simple Hello World Workflow -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingEight">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight"
+                            aria-expanded="false"
+                            aria-controls="collapseEight">
+                        Simple Hello World Workflow
+                    </button>
+                </h2>
+                <div id="collapseEight"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingEight"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Create a simple <code>hello_world.tag</code> file</p>
+                        <pre><code>echo "Hello World!"
 echo "---------------"
 echo "This is an automated output using TagUI"
 </code></pre>
-        <p><code>$ tagui ./..../hello_world.tag</code></p>
-        <p><code>$ tagui ./..../hello_world.tag -nobrowser</code></p>
+                        <p><code>$ tagui ./..../hello_world.tag</code></p>
+                        <p><code>$ tagui ./..../hello_world.tag -nobrowser</code></p>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="simple-google-search-workflow">Simple Google Search Workflow</h2>
-        <p>Create a simple <code>google_search.tag</code> file</p>
-        <pre><code>// visit google.com
+            <!-- Simple Google Search Workflow -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingNine">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine"
+                            aria-expanded="false"
+                            aria-controls="collapseNine">
+                        Simple Google Search Workflow
+                    </button>
+                </h2>
+                <div id="collapseNine"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingNine"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Create a simple <code>google_search.tag</code> file</p>
+                        <pre><code>// visit google.com
 https://www.google.com
 
 // type a search query "What is RPA?"
@@ -136,10 +320,30 @@ type input as What is RPA?[enter]
 // Wait for 5 second before terminating
 wait 5
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="user-in-the-loop-workflow">User In The Loop Workflow</h2>
-        <p>create a workflow file called <code>ask_user.tag</code></p>
-        <pre><code>// This is a comment, you to describe the code.
+            <!-- User In The Loop Workflow -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTen"
+                            aria-expanded="false"
+                            aria-controls="collapseTen">
+                        User In The Loop Workflow
+                    </button>
+                </h2>
+                <div id="collapseTen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Create a workflow file called <code>ask_user.tag</code></p>
+                        <pre><code>// This is a comment, you to describe the code.
 // I will be asking for the name and then displaying a welcome message
 // in the following lines of code
 ask "Which website would you like to visit?"
@@ -148,11 +352,31 @@ echo "okay, I will visit the website: " `ask_result`
 
 http://`ask_result`
 </code></pre>
-        <p><code>tagui ./..../ask_user.tag</code></p>
+                        <p><code>tagui ./..../ask_user.tag</code></p>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="variables-assignments--operators">Variables, Assignments &amp; Operators</h2>
-        <p>create a workflow file <code>variables.tag</code></p>
-        <pre><code>firstName = "Salvino"
+            <!-- Variables, Assignments & Operators -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingEleven">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseEleven"
+                            aria-expanded="false"
+                            aria-controls="collapseEleven">
+                        Variables, Assignments &amp; Operators
+                    </button>
+                </h2>
+                <div id="collapseEleven"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingEleven"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Create a workflow file <code>variables.tag</code></p>
+                        <pre><code>firstName = "Salvino"
 lastName = "D'sa"
 
 if firstName equal to "Salvino"
@@ -180,57 +404,177 @@ echo "This is logically correct"
 if 7 greater than 6 and equal to 7
 echo "This is also logically correct"
 </code></pre>
-        <p><code>tagui ./...../variables.tag</code></p>
+                        <p><code>tagui ./...../variables.tag</code></p>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="loops">Loops</h2>
-        <p>Create a workflow file called <code>loops.tag</code></p>
-        <pre><code>for n from 1 to 5
+            <!-- Loops -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTwelve">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwelve"
+                            aria-expanded="false"
+                            aria-controls="collapseTwelve">
+                        Loops
+                    </button>
+                </h2>
+                <div id="collapseTwelve"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwelve"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Create a workflow file called <code>loops.tag</code></p>
+                        <pre><code>for n from 1 to 5
 echo `n`
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="dom-identifiers">DOM identifiers</h2>
-        <p>identifier will by default try to match <strong>id, name or classname</strong> of the elements present in the DOM.</p>
-        <p><code>Click Search</code></p>
-        <p>This will click on any element that has either id, name or class name as "<strong>Search</strong>".</p>
-        <p>&gt;&gt;Absolute identifier Xpath:</p>
-        <p><code>/html/body/div[1]/div[3]input</code></p>
-        <p>&gt;&gt;Relative identifier Xpath:</p>
-        <p><code>//*[@id="search-path"]/input</code></p>
+            <!-- DOM identifiers -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingThirteen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThirteen"
+                            aria-expanded="false"
+                            aria-controls="collapseThirteen">
+                        DOM identifiers
+                    </button>
+                </h2>
+                <div id="collapseThirteen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingThirteen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Identifier will by default try to match <strong>id, name or classname</strong> of the elements present in the DOM.</p>
+                        <p><code>Click Search</code></p>
+                        <p>This will click on any element that has either id, name or class name as "<strong>Search</strong>".</p>
+                        <p>&gt;&gt;Absolute identifier XPath:</p>
+                        <p><code>/html/body/div[1]/div[3]input</code></p>
+                        <p>&gt;&gt;Relative identifier XPath:</p>
+                        <p><code>//*[@id="search-path"]/input</code></p>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="visual-identifiers">Visual identifiers</h2>
-        <p>When it is difficult to locate any element using the default, absolute or relative identifiers we can make use of the visual identifiers to locate the element. This can be done by simply capturing a snapshot of the element and then referencing that image in the action as follows:</p>
-        <p><code>click elements/search.png</code></p>
+            <!-- Visual identifiers -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingFourteen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFourteen"
+                            aria-expanded="false"
+                            aria-controls="collapseFourteen">
+                        Visual identifiers
+                    </button>
+                </h2>
+                <div id="collapseFourteen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingFourteen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>When it is difficult to locate any element using the default, absolute or relative identifiers, we can use visual identifiers to locate the element. This can be done by simply capturing a snapshot of the element and then referencing that image in the action as follows:</p>
+                        <p><code>click elements/search.png</code></p>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="scraping-text-using-a-locator">Scraping text using a locator</h2>
-        <pre><code>Read //span[@class="stock-name"] to stockName
+            <!-- Scraping text using a locator -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingFifteen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFifteen"
+                            aria-expanded="false"
+                            aria-controls="collapseFifteen">
+                        Scraping text using a locator
+                    </button>
+                </h2>
+                <div id="collapseFifteen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingFifteen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <pre><code>Read //span[@class="stock-name"] to stockName
 echo stockName
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="synchronization">Synchronization</h2>
-        <p>Sometimes you may realise that your computer is faster to process your automation, but your network is too slow to respond. It could very likely be that you are having connectivity issues with your ISP. In such cases we need to synchronise the computer with your network responses. To do this we can use two methods:</p>
-        <ol>
-            <li><strong>Wait</strong>: Explicitly tells the program to wait for specific number of seconds before moving on to the next line</li>
-            <li><strong>Timeout</strong>: Tells the program to wait at most <code>x</code> number of seconds before terminating. If the page loads before that, then the program terminates immediately.</li>
-        </ol>
-        <pre><code>wait 5
+            <!-- Synchronization -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingSixteen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSixteen"
+                            aria-expanded="false"
+                            aria-controls="collapseSixteen">
+                        Synchronization
+                    </button>
+                </h2>
+                <div id="collapseSixteen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingSixteen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Sometimes you may realize that your computer is faster to process your automation, but your network is too slow to respond. It could very likely be that you are having connectivity issues with your ISP. In such cases, we need to synchronize the computer with your network responses. To do this, we can use two methods:</p>
+                        <ol>
+                            <li><strong>Wait</strong>: Explicitly tells the program to wait for a specific number of seconds before moving on to the next line</li>
+                            <li><strong>Timeout</strong>: Tells the program to wait at most <code>x</code> number of seconds before terminating. If the page loads before that, then the program terminates immediately.</li>
+                            </ol>
+                            <pre><code>wait 5
 wait 5 seconds
 timeout 30
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="mouse--keyboard-actions">Mouse &amp; Keyboard actions</h2>
-        <p>There are three types of click events:</p>
-        <ol>
-            <li><code>click</code>: Performs a left click</li>
-            <li><code>dclick</code>: Performs a double click</li>
-            <li><code>rclick</code>: Performs a right click</li>
-            <li><code>hover</code>: Performs a hover over an element</li>
-        </ol>
-        <p>Keyboard actions are of two types:</p>
-        <ol>
-            <li><code>keyboard</code>: this will send keystrokes like how a user would type on the keyboard</li>
-            <li><code>type</code>: send full keyed texts to specific elements in the web interface</li>
-        </ol>
-        <pre><code>click input
+            <!-- Mouse & Keyboard actions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingSeventeen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeventeen"
+                            aria-expanded="false"
+                            aria-controls="collapseSeventeen">
+                        Mouse &amp; Keyboard actions
+                    </button>
+                </h2>
+                <div id="collapseSeventeen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingSeventeen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>There are four types of click events:</p>
+                        <ol>
+                            <li><code>click</code>: Performs a left click</li>
+                            <li><code>dclick</code>: Performs a double click</li>
+                            <li><code>rclick</code>: Performs a right click</li>
+                            <li><code>hover</code>: Performs a hover over an element</li>
+                        </ol>
+                        <p>Keyboard actions are of two types:</p>
+                        <ol>
+                            <li><code>keyboard</code>: This will send keystrokes like how a user would type on the keyboard</li>
+                            <li><code>type</code>: Send full keyed texts to specific elements in the web interface</li>
+                            </ol>
+                            <pre><code>click input
 keyboard Hello World
 keyboard [enter]
 keyboard [win]r
@@ -240,10 +584,30 @@ type input as Hello World
 type input as [clear]Hello Learner[enter]
 type searchbox.png as Tomatoes[enter]
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="uploads-and-downloads">Uploads and Downloads</h2>
-        <p>You can perform uploads and download of files using TagUI with the following syntax:</p>
-        <pre><code>// Upload syntax
+            <!-- Uploads and Downloads -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingEighteen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseEighteen"
+                            aria-expanded="false"
+                            aria-controls="collapseEighteen">
+                        Uploads and Downloads
+                    </button>
+                </h2>
+                <div id="collapseEighteen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingEighteen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>You can perform uploads and downloads of files using TagUI with the following syntax:</p>
+                        <pre><code>// Upload syntax
 // upload [DOM of upload element] as [filename]
 
 // Sample to upload a CSV file to convert to PDF
@@ -254,21 +618,61 @@ Click Convert CSV to PDF
 // upload websitename.csv
 upload #f1 as websitename.csv
 </code></pre>
-        <pre><code>// Download syntax
+                        <pre><code>// Download syntax
 // download to [folder_location]
 
 download to D:\Projects\example
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="selection-of-items-in-drop-downs">Selection of items in drop-downs</h2>
-        <pre><code>// select [DOM Identifier] as [option value or text]
+            <!-- Selection of items in drop-downs -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingNineteen">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseNineteen"
+                            aria-expanded="false"
+                            aria-controls="collapseNineteen">
+                        Selection of items in drop-downs
+                    </button>
+                </h2>
+                <div id="collapseNineteen"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingNineteen"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <pre><code>// select [DOM Identifier] as [option value or text]
 
 select variantName as blue
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="popups">Popups</h2>
-        <p>Popups can be used to confirm a specific step or action before actually performing it. In other words, it could be used to take user input during the execution of the automation program.</p>
-        <pre><code>popup [unique part of new tab's URL]
+            <!-- Popups -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTwenty">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwenty"
+                            aria-expanded="false"
+                            aria-controls="collapseTwenty">
+                        Popups
+                    </button>
+                </h2>
+                <div id="collapseTwenty"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwenty"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>Popups can be used to confirm a specific step or action before actually performing it. In other words, it could be used to take user input during the execution of the automation program.</p>
+                        <pre><code>popup [unique part of new tab's URL]
                [steps]
 
 // example
@@ -286,12 +690,32 @@ timeout 5
 click FAQs
 timeout 5
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="table">Table</h2>
-        <p>You can save any table available on the internet to a csv file using the following command:</p>
-        <p><code>table [table number] to [filename.csv]</code></p>
-        <p>Example:</p>
-        <pre><code>https://www.bankrate.com/banking/savings/rates
+            <!-- Table -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTwentyOne">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyOne"
+                            aria-expanded="false"
+                            aria-controls="collapseTwentyOne">
+                        Table
+                    </button>
+                </h2>
+                <div id="collapseTwentyOne"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwentyOne"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>You can save any table available on the internet to a CSV file using the following command:</p>
+                        <p><code>table [table number] to [filename.csv]</code></p>
+                        <p>Example:</p>
+                        <pre><code>https://www.bankrate.com/banking/savings/rates
 timeout 5
 
 table 1 to savings_accounts.csv
@@ -300,38 +724,58 @@ table 2 to online_banks.csv
 
 table 3 to savings_account_vs_mf.csv
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h2 id="helper-functions">Helper functions</h2>
-        <p>To display the url of the page you are currently on, you can use the <code>url()</code> helper function.</p>
-        <pre><code>currentURL = `url()`
+            <!-- Helper Functions -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTwentyTwo">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwentyTwo">
+                        Helper functions
+                    </button>
+                </h2>
+                <div id="collapseTwentyTwo"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwentyTwo"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <p>To display the URL of the page you are currently on, you can use the <code>url()</code> helper function.</p>
+                        <pre><code>currentURL = `url()`
 echo `currentURL`
 
 if currentURL equal to "https://example.com/success"
 echo "Transaction was successful!"
 </code></pre>
-        <p>To display the title of the page you are currently on, you can use the <code>title()</code> helper function.</p>
-        <pre><code>https://www.bankrate.com
+                        <p>To display the title of the page you are currently on, you can use the <code>title()</code> helper function.</p>
+                        <pre><code>https://www.bankrate.com
 timeout 5
 
 echo `title()`
 </code></pre>
-        <p>To get the contents of the current page you are currently on, you can use the <code>text()</code> helper function.</p>
-        <pre><code>https://www.investopedia.com
+                        <p>To get the contents of the current page you are currently on, you can use the <code>text()</code> helper function.</p>
+                        <pre><code>https://www.investopedia.com
 echo `text()`
 
 if text() contains 'Investing'
 echo 'Investing option is displayed!'
 </code></pre>
-        <p>To display the amount of time elapsed between executions, you can use the <code>timer()</code> helper function.</p>
-        <pre><code>timer()
+                        <p>To display the amount of time elapsed between executions, you can use the <code>timer()</code> helper function.</p>
+                        <pre><code>timer()
 
 http://www.google.com
 timeout 5
 
 echo total time = `timer()`
 </code></pre>
-        <p>To copy and paste contents onto the clipboard, you can use the <code>clipboard()</code> helper function.</p>
-        <pre><code>varGetContent = ""
+                        <p>To copy and paste content onto the clipboard, you can use the <code>clipboard()</code> helper function.</p>
+                        <pre><code>varGetContent = ""
 
 echo Before clipboard varGetContent: `varGetContent`
 
@@ -341,8 +785,8 @@ varGetContent = clipboard()
 
 echo After clipboard varGetContent: `varGetContent`
 </code></pre>
-        <p>To get the count of the number of matching elements matching the specified identifier, you can use the <code>count()</code> helper function.</p>
-        <pre><code>varCountLink = 0
+                        <p>To get the count of the number of matching elements matching the specified identifier, you can use the <code>count()</code> helper function.</p>
+                        <pre><code>varCountLink = 0
 
 echo varCountLink = `varCountLink`
 
@@ -353,8 +797,8 @@ varCountLink - count('Credit cards')
 
 echo varCountLink = `varCountLink`
 </code></pre>
-        <p>To check if an element exists on the screen, you can use the <code>exist()</code> helper function. This waits for the timeout. To check if an element exists on the screen without waiting for the timeout, you can use the <code>present()</code> helper function.</p>
-        <pre><code>varResult = ""
+                        <p>To check if an element exists on the screen, you can use the <code>exist()</code> helper function. This waits for the timeout. To check if an element exists on the screen without waiting for the timeout, you can use the <code>present()</code> helper function.</p>
+                        <pre><code>varResult = ""
 
 https://www.bankrate.com
 timer()
@@ -367,13 +811,13 @@ varResult = present('Credit cards')
 echo varResult - `varResult`
 echo time taken = `timer()`
 </code></pre>
-        <p>To get the environment variables from the system, you can use the <code>get_env()</code> helper function.</p>
-        <pre><code>echo TEMP: `get_env('TEMP')`
+                        <p>To get the environment variables from the system, you can use the <code>get_env()</code> helper function.</p>
+                        <pre><code>echo TEMP: `get_env('TEMP')`
 echo OS: `get_env('OS')`
 echo USERNAME: `get_env('USERNAME')`
 </code></pre>
-        <p>To capture a screenshot of the screen, you can use the <code>snap()</code> helper function.</p>
-        <pre><code>// snap [DOM/XPath/Region/Page] to [filename]
+                        <p>To capture a screenshot of the screen, you can use the <code>snap()</code> helper function.</p>
+                        <pre><code>// snap [DOM/XPath/Region/Page] to [filename]
 
 https://www.investopedia.com
 
@@ -381,48 +825,73 @@ snap Education to education.png
 
 snap //a[@id='header_logo'] to invest_logo.png
 </code></pre>
-        <p>To save texts to a new file you can use the <code>dump()</code> helper function.</p>
-        <pre><code>// This command will always overwrite a file, if the file with the same name already exists.
+                        <p>To save texts to a new file, you can use the <code>dump()</code> helper function.</p>
+                        <pre><code>// This command will always overwrite a file, if the file with the same name already exists.
 // dump [text] to [filename]
 
 
 https://www.investopedia.com
 dump text() to text_file.txt
 </code></pre>
-        <p>To append to an existing file, you can use the <code>write()</code> helper function.</p>
-        <pre><code>write Add this line of text to file1.txt
+                        <p>To append to an existing file, you can use the <code>write()</code> helper function.</p>
+                        <pre><code>write Add this line of text to file1.txt
 write Add this line of text again to file1.txt
 </code></pre>
-        <p>To load the contents of a file into a variable, you can use the <code>load()</code> helper function.</p>
-        <pre><code>fileContents = load(file1.txt)
+                        <p>To load the contents of a file into a variable, you can use the <code>load()</code> helper function.</p>
+                        <pre><code>fileContents = load(file1.txt)
 echo `fileContents`
 </code></pre>
+                    </div>
+                    </div>
+                    </div>
 
-        <h3 id="references">References</h3>
-        <ul>
-            <li><a href="https://www.youtube.com/playlist?list=PL2gs9_mNDDvZSCPsJu4APZR6AaDzUY7R6"
-                   target="_blank"
-                   rel="noopener noreferrer">UAssert - TagUi</a></li>
-        </ul>
-    </div>
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white mt-4 py-3">
-        <div class="container text-center">
-            <a href="https://www.creativecapsule.com">
-                <p>&copy; 2024 CreativeCapsule. All rights reserved.</p>
-            </a>
-            <p>Follow us on
-                <a href="https://twitter.com/cci_connect"
-                   class="text-white">Twitter</a>,
-                <a href="https://www.instagram.com/creativecapsule/?hl=en"
-                   class="text-white">Instagram</a>, and
-                <a href="https://in.linkedin.com/company/creativecapsule"
-                   class="text-white">LinkedIn</a>.
-            </p>
-        </div>
-    </footer>
-    <!-- Bootstrap 5 JS (for tooltips) -->
+            <!-- References -->
+            <div class="accordion-item">
+                <h2 class="accordion-header"
+                    id="headingTwentyThree">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyThree"
+                            aria-expanded="false"
+                            aria-controls="collapseTwentyThree">
+                        References
+                    </button>
+                </h2>
+                <div id="collapseTwentyThree"
+                     class="accordion-collapse collapse"
+                     aria-labelledby="headingTwentyThree"
+                     data-bs-parent="#rpaAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><a href="https://www.youtube.com/playlist?list=PL2gs9_mNDDvZSCPsJu4APZR6AaDzUY7R6"
+                                   target="_blank"
+                                   rel="noopener noreferrer">UAssert - TagUi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                
+                </div>
+                </div>
+                </div>
+            <!-- Footer Section -->
+            <footer class="bg-dark text-white mt-4 py-3">
+                <div class="container text-center">
+                    <a href="https://www.creativecapsule.com">
+                        <p>&copy; 2024 CreativeCapsule. All rights reserved.</p>
+                    </a>
+                    <p>Follow us on
+                        <a href="https://twitter.com/cci_connect"
+                           class="text-white">Twitter</a>,
+                        <a href="https://www.instagram.com/creativecapsule/?hl=en"
+                           class="text-white">Instagram</a>, and
+                        <a href="https://in.linkedin.com/company/creativecapsule"
+                           class="text-white">LinkedIn</a>.
+                    </p>
+                </div>
+            </footer>
+            <!-- Bootstrap 5 JS (for tooltips and accordions) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
