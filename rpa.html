@@ -25,6 +25,19 @@
     .banner-container img {
       cursor: pointer;
     }
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      flex: 1;
+    }
+
   </style>
 </head>
 
@@ -46,7 +59,16 @@
     </nav>
   </header>
 
+
   <div class="container">
+    <!-- Breadcrumb Section -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active"
+            aria-current="page">RPA Session Resources</li>
+      </ol>
+    </nav>
     <h1 id="rpa-robotic-process-automation">RPA: Robotic Process Automation</h1>
 
     <p>Robotic Process Automation (RPA) is a technology that uses software robots or "bots" to automate repetitive, rule-based tasks traditionally done by humans. These tasks often involve interacting with digital systems, such as entering data, processing transactions, or responding to customer service inquiries. RPA can be applied in various industries to increase efficiency, reduce errors, and free up human workers for more complex, value-added activities.</p>
@@ -63,14 +85,31 @@
     <ul>
       <li>Salvino D'sa</li>
       <li>Ivo Costa</li>
-    </ul>
+  </ul>
+
 
     <h2 id="venue">Venue</h2>
     <p>PCCE, Verna - Goa</p>
   </div>
-
+<!-- Footer Section -->
+<footer class="bg-dark text-white mt-4 py-3">
+  <div class="container text-center">
+    <a href="https://www.creativecapsule.com">
+      <p>&copy; 2024 CreativeCapsule. All rights reserved.</p>
+    </a>
+    <p>Follow us on
+      <a href="https://twitter.com/cci_connect"
+         class="text-white">Twitter</a>,
+      <a href="https://www.instagram.com/creativecapsule/?hl=en"
+         class="text-white">Instagram</a>, and
+      <a href="https://in.linkedin.com/company/creativecapsule"
+         class="text-white">LinkedIn</a>.
+    </p>
+  </div>
+</footer>
   <!-- Bootstrap 5 JS (for tooltips) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 
 </html>
