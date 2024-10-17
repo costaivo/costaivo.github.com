@@ -1,0 +1,11 @@
+Student_ID,Student_Name,Department,Electromagnetics,Control Systems,Power Systems,Signal Processing,Genetics,Biochemistry,Molecular Biology,Microbiology,Immunology,Structural Analysis,Concrete Technology,Geotechnical Engineering,Hydrology,Transportation Engineering,Data Structures,Algorithms,Operating Systems,Database Systems,Software Engineering,Thermodynamics,Fluid Mechanics,Machine Design,Manufacturing Process,Mechanics
+S001,Chris Martinez,Electrical,49.0,84.0,94.0,79.0,,,,,,,,,,,,,,,,,,,,
+S002,Jane Brown,Electrical,91.0,56.0,86.0,39.0,,,,,,,,,,,,,,,,,,,,
+S004,Jane Garcia,Civil,,,,,,,,,,87.0,81.0,47.0,45.0,59.0,,,,,,,,,,
+S005,Sarah Miller,Computer Science,,,,,,,,,,,,,,,94.0,82.0,75.0,53.0,38.0,,,,,
+S006,Jane Martinez,Civil,,,,,,,,,,75.0,94.0,69.0,36.0,61.0,,,,,,,,,,
+S007,David Rodriguez,Computer Science,,,,,,,,,,,,,,,39.0,45.0,68.0,35.0,36.0,,,,,
+S008,Jane Brown,Computer Science,,,,,,,,,,,,,,,56.0,91.0,37.0,73.0,35.0,,,,,
+S009,John Smith,Electrical,87.0,97.0,50.0,45.0,,,,,,,,,,,,,,,,,,,,
+S011,John Brown,Electrical,35.0,92.0,90.0,61.0,,,,,,,,,,,,,,,,,,,,
+S012,Chris Martinez,Civil,,,,,,,,,,64.0,63.0,74.0,70.0,90.0,,,,,,,,,,
