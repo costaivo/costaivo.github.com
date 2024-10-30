@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>RPA Session Resources</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+  
+  <!-- Custom styles -->
+  <style>
+    body {
+      font-family: 'Consolas', monospace;
+    }
+  
+    .hidden {
+      display: none;
+    }
+  
+    /* Add pointer cursor to banner */
+    .banner-container img {
+      cursor: pointer;
+    }
+  </style>
+  </head>
+  
+  <body class="bg-light">
+  
+    <!-- Navbar Section -->
+    <header class="mb-4">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+          <!-- Left-aligned, bold, and font set globally to Consolas -->
+          <a class="navbar-brand text-white fw-bold text-start"
+             href="/"
+             data-bs-toggle="tooltip"
+             data-bs-placement="bottom"
+             title="Explore the resources to get started!">
+            Robotic Process Automation (RPA) Session
+          </a>
+        </div>
+      </nav>
+    </header>
+  
+    <!-- Banner Section -->
+    <div class="container mb-4">
+      <div class="banner-container">
+        <img src="banner-20241025.png"
+             alt="RPA Session Banner"
+             class="img-fluid">
+      </div>
+    </div>
+  
+    <!-- Resources Section -->
+    <section class="container hidden resources-section">
+      <h2 class="text-center mb-4">Session Resources</h2>
+  
+      <div class="row g-4">
+        <!-- Card for Pre Requisites -->
+        <div class="col-md-6">
+      <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+        <div class="card-body">
+        <div class="card-header">
+          <a href="Pre_Requisites.html"
+             class="text-primary">Pre Requisites</a>
+          </div>
+          <div>
+            <h5 class="card-text">Setup required on your pc</h5>
+          </div>
+          </div>
+      </div>
+      </div>
+      <!-- Card for Presentation -->
+      <div class="col-md-6">
+      <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+        <div class="card-body">
+          <div class="card-header">
+          <a href="Presentation.html"
+             class="text-primary">Presentation</a>
+          </div>
+          <div>
+            <h5 class="card-text">Presentation slides for the session</h5>
+          </div>
+          </div>
+          </div>
+          </div>
+      <!-- Card for Code Snippets -->
+      <div class="col-md-6">
+      <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+        <div class="card-body">
+          <div class="card-header">
+          <a href="Code_Snippets.html"
+             class="text-primary">Code Snippets</a>
+          </div>
+          <div>
+            <h5 class="card-text">Code examples used in the session</h5>
+          </div>
+          </div>
+          </div>
+          </div>
+          <!-- Card for Completed Solutions -->
+          <div class="col-md-6">
+      <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+        <div class="card-body">
+          <div class="card-header">
+          <a href="Completed_Solutions.html"
+             class="text-primary">Completed Solutions</a>
+          </div>
+          <div>
+            <h5 class="card-text">Final solutions for the exercises</h5>
+          </div>
+          </div>
+          </div>
+          </div>
+                <!-- Card for Resources -->
+                <div class="col-md-6">
+                  <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+                    <div class="card-body">
+                      <div class="card-header">
+                        <a href="rpa.html"
+                           class="text-primary">Resources</a>
+                        </div>
+                        <div>
+                        <h5 class="card-text">Resources required for the workshop</h5>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                <!-- Card for Feedback Form-->
+                <div class="col-md-6">
+                  <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+                    <div class="card-body">
+                      <div class="card-header">
+                        <a href="https://forms.fillout.com/t/kAXz7xJ96rus"
+                           class="text-primary">Feedback Form</a>
+                      </div>
+                      <div>
+                        <h5 class="card-text">Provide your feedback on the session</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                      <!-- Card for Discord Channel -->
+                      <div class="col-md-6">
+                        <div class="card border-success text-white bg-dark shadow p-3 mb-5 rounded">
+                          <div class="card-body">
+                            <div class="card-header">
+                              <a href="https://discord.gg/dBc7FBU6"
+                                 class="text-primary">Discord Channel</a>
+                            </div>
+                            <div>
+                              <h5 class="card-text">Join our Discord community</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          </div>
+    </section>
+    
+    <!-- Bootstrap 5 JS (for tooltips) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Initialize tooltips -->
+    <script>
+      const tooltipTriggerList=document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      const tooltipList=[...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+      document.addEventListener('DOMContentLoaded', function() {
+      const banner=document.querySelector('.banner-container');
+      const resourcesSection=document.querySelector('.resources-section');
+
+      if(localStorage.getItem('visited')===null) {
+        banner.classList.remove('hidden');
+        resourcesSection.classList.add('hidden');
+        localStorage.setItem('visited', 'true');
+      } else {
+        banner.classList.add('hidden');
+        resourcesSection.classList.remove('hidden');
+      }
+
+      banner.addEventListener('click', function() {
+        banner.classList.add('hidden');
+        resourcesSection.classList.remove('hidden');
+      });
+    });
+</script>
+</body>
+</html>
