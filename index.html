@@ -3,18 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Moved</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Learn various web development tutorials including HTML, CSS, JavaScript, Bootstrap, React, and Node.js.">
+    <title>Web Development Tutorials</title>
+    
+    <link rel="canonical" href="https://www.yourdomain.com/tutorials">
+    <meta property="og:title" content="Web Development Tutorials">
+    <meta property="og:description" content="Explore a variety of web development tutorials.">
+    <meta property="og:image" content="https://via.placeholder.com/300">
+    <meta property="og:url" content="https://www.yourdomain.com/tutorials">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        h2 {
-            color: black;
+        body {
+            background-color: #e7f5ff; /* Light bluish background */
+        }
+        .card {
+            background-color: #ffffff; /* White background for cards */
+            border: 1px solid #007bff; /* Blue border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Light blue shadow */
+            transition: transform 0.2s, box-shadow 0.2s; /* Transition effect */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3); /* Darker shadow on hover */
+        }
+        .card-title {
+            color: #007bff; /* Blue color for card titles */
+        }
+        .card-expanded {
+            transform: scale(1.05);
+            z-index: 1000;
+        }
+        
+        .card-details {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .btn-tutorial {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+            display: block;  /* Make button block level */
+            width: fit-content;  /* Make button width fit its content */
+            margin: 1rem auto;  /* Center the button with auto margins */
+        }
+        
+        .btn-tutorial:hover {
+            background-color: #0056b3;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container text-center mt-5">
-        <h1 class="text-warning">Sorry! - Content for site has been moved....</h1>
-        <h2>The site is down, you were too late to fill the feedback form, contact the trainer, if you still want to submit your feedback</h2>
-    </div>
+    <div class="container mt-5">
+        <header>
+            <h1 class="text-center mb-4">Web Development Tutorials</h1>
+        </header>
+        <main>
+            <section>
+                <div class="row">
+                    <div class="col-md-4">
+                        <article class="card mb-4" onclick="toggleCard(this)">
+                            <div class="card-body">
+                                <h2 class="card-title">React Introduction</h2>
+                                <p class="card-text">An overview of React, a popular library for building user interfaces with components.</p>
+                                <div class="card-details">
+                                    <!-- Details content will go here -->
+                                </div>
+                                <a href="https://costaivo.com/tutorial-reactjs" class="btn btn-tutorial" onclick="event.stopPropagation()">
+                                    Go 2 Tutorial
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleCard(card) {
+            const details = card.querySelector('.card-details');
+            const allCards = document.querySelectorAll('.card');
+            
+            // Remove expanded class from all other cards
+            allCards.forEach(c => {
+                if (c !== card) {
+                    c.classList.remove('card-expanded');
+                    c.querySelector('.card-details').style.display = 'none';
+                }
+            });
+            
+            // Toggle current card
+            card.classList.toggle('card-expanded');
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
