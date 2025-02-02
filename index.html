@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn various web development tutorials including HTML, CSS, JavaScript, Bootstrap, React, and Node.js.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="costaIvo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="costaIvo.jpg">
+    
     <title>Web Development Tutorials</title>
     
     <link rel="canonical" href="https://www.yourdomain.com/tutorials">
@@ -85,8 +90,25 @@
                             </div>
                         </article>
                     </div>
-
-
+                    
+                    <div class="col-md-4">
+                        <article class="card mb-4" onclick="toggleCard(this)">
+                            <div class="card-body">
+                                <h2 class="card-title">Deploy React App</h2>
+                                <p class="card-text">Step by step guide to deploying a react application using vite build and Github pages</p>
+                                <div class="card-details">
+                                    <!-- Details content will go here -->
+                                </div>
+                                <a href="deploy-react-app.html" class="btn btn-tutorial" onclick="event.stopPropagation()">
+                                    Go 2 Tutorial
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
