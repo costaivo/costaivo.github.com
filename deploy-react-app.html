@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to deploy a React application using Vite build and Github pages">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="costaIvo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="costaIvo.jpg">
+    
+    <title>Deploy React App Tutorial</title>
+    
+    <link rel="canonical" href="https://www.yourdomain.com/deploy-react-app">
+    <meta property="og:title" content="Deploy React App Tutorial">
+    <meta property="og:description" content="Step by step guide to deploying a react application using vite build and Github pages">
+    <meta property="og:image" content="https://via.placeholder.com/300">
+    <meta property="og:url" content="https://www.yourdomain.com/deploy-react-app">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e7f5ff;
+            line-height: 1.6;
+        }
+        
+        .tutorial-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+            padding: 2rem;
+            margin: 2rem auto;
+        }
+        
+        .tutorial-title {
+            color: #007bff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 4px solid #007bff;
+            background-color: #f8f9fa;
+        }
+        
+        .step-title {
+            color: #0056b3;
+            margin-bottom: 1rem;
+        }
+        
+        code {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            display: block;
+            margin: 1rem 0;
+        }
+        
+        .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container tutorial-container">
+        <header>
+            <h1 class="tutorial-title">Deploy React App to GitHub Pages</h1>
+            <p class="lead">A comprehensive guide to deploying your React application built with Vite to GitHub Pages</p>
+        </header>
+
+        <main>
+            <div class="step">
+                <h2 class="step-title">Step 1: Prepare Your React Project</h2>
+                <p>Ensure your React project is ready for deployment and all changes are committed to GitHub.</p>
+                <code>
+                    git add .<br>
+                    git commit -m "Prepare for deployment"<br>
+                    git push origin main
+                </code>
+            </div>
+
+            <div class="step">
+                <h2 class="step-title">Step 2: Install gh-pages Package</h2>
+                <p>Add the gh-pages package as a development dependency:</p>
+                <code>npm install gh-pages --save-dev</code>
+            </div>
+
+            <div class="step">
+                <h2 class="step-title">Step 3: Update package.json</h2>
+                <p>Add the following fields to your package.json:</p>
+                <code>
+                    {<br>
+                    &nbsp;&nbsp;"homepage": "https://yourusername.github.io/your-repo-name",<br>
+                    &nbsp;&nbsp;"scripts": {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"predeploy": "npm run build",<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"deploy": "gh-pages -d dist"<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </code>
+            </div>
+
+            <div class="step">
+                <h2 class="step-title">Step 4: Update vite.config.js</h2>
+                <p>Add the base URL to your Vite configuration:</p>
+                <code>
+                    export default defineConfig({<br>
+                    &nbsp;&nbsp;base: '/your-repo-name/',<br>
+                    &nbsp;&nbsp;plugins: [react()]<br>
+                    })
+                </code>
+            </div>
+
+            <div class="step">
+                <h2 class="step-title">Step 5: Deploy</h2>
+                <p>Run the deploy command to publish your app:</p>
+                <code>npm run deploy</code>
+                <div class="note">
+                    <strong>Note:</strong> After deployment, go to your repository settings and ensure GitHub Pages is configured to use the gh-pages branch.
+                </div>
+            </div>
+
+            <div class="step">
+                <h2 class="step-title">Step 6: Verify Deployment</h2>
+                <p>Visit your GitHub Pages URL to verify the deployment:</p>
+                <code>https://yourusername.github.io/your-repo-name</code>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
